@@ -131,6 +131,22 @@ body {
     gap: 60px; 
     flex-wrap: wrap; 
 }
+/* Tu CSS */
+.mi-boton {
+    background-color: #3498db; /* Azul inicial */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    
+    /* 1. Qué propiedad animar | 2. Duración | 3. Ritmo (ease es suave) */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* El estado final cuando el usuario interactúa */
+  .mi-boton:hover {
+    background-color: #2ecc71; /* Verde final */
+  }
 
 .hero-image img { 
     width: 290px; 
@@ -371,3 +387,4 @@ body {
     .hero-image img { width: 230px; height: 230px; }
     .section-title { font-size: 1.8rem; }
 }
+
