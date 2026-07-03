@@ -1,0 +1,373 @@
+/* ==========================================
+   VARIABLES DE COLORES LLAMATIVOS Y NEÓN
+   ========================================== */
+   :root {
+    --bg-main: #0a0e17;        /* Azul espacial profundo */
+    --bg-card: #121826;        /* Tarjetas azul oscuro brillante */
+    --text-primary: #e2e8f0;   /* Blanco azulado muy claro */
+    --text-white: #ffffff;
+    --accent-neon: #00f2fe;    /* Azul eléctrico/Cian llamativo */
+    --accent-purple: #9b51e0;  /* Morado neón vibrante */
+    --accent-cyber: #39ff14;   /* Verde neón de ciberseguridad */
+    --border-color: #1e293b;
+    --font-code: 'Fira Code', monospace;
+    --font-sans: 'Roboto', sans-serif;
+}
+
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.content-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* TÍTULOS DE SECCIÓN */
+.section-title { 
+    text-align: center; 
+    font-family: var(--font-code); 
+    font-size: 2.2rem; 
+    color: var(--text-white); 
+    margin-bottom: 40px; 
+    position: relative; 
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title::after { 
+    content: ''; 
+    position: absolute; 
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 80px; 
+    height: 4px; 
+    background: linear-gradient(90deg, var(--accent-neon), var(--accent-purple)); 
+    border-radius: 2px; 
+}
+
+/* ==========================================
+   1. BARRA DE NAVEGACIÓN (FLEXBOX)
+   ========================================== */
+.main-header { 
+    background-color: rgba(10, 14, 23, 0.95); 
+    border-bottom: 2px solid var(--border-color); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    backdrop-filter: blur(10px);
+}
+
+.header-container { 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap; 
+}
+
+.logo { 
+    font-family: var(--font-code); 
+    font-weight: 700; 
+    font-size: 1.5rem; 
+    color: var(--accent-neon);
+    text-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+}
+
+.main-nav ul { 
+    list-style: none; 
+    display: flex; 
+    gap: 25px; 
+}
+
+.main-nav a { 
+    text-decoration: none; 
+    color: var(--text-primary); 
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease; 
+}
+
+.main-nav a:hover { 
+    color: var(--accent-cyber); 
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.5);
+}
+
+/* ==========================================
+   2. PRESENTACIÓN HERO (FLEXBOX RESPONSIVE)
+   ========================================== */
+.hero-section { 
+    background: radial-gradient(circle at top right, #1a103c, var(--bg-main)); 
+    padding: 100px 20px; 
+    border-bottom: 1px solid var(--border-color); 
+}
+
+.hero-container { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 60px; 
+    flex-wrap: wrap; 
+}
+
+.hero-image img { 
+    width: 290px; 
+    height: 290px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 4px solid var(--accent-neon); 
+    box-shadow: 0 0 30px rgba(0, 242, 254, 0.4);
+    transition: transform 0.5s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.03) rotate(3deg);
+}
+
+.hero-text { 
+    flex: 1; 
+    min-width: 300px; 
+}
+
+.badge { 
+    background: linear-gradient(135deg, rgba(0, 242, 254, 0.1), rgba(155, 81, 224, 0.2)); 
+    color: var(--accent-neon); 
+    padding: 6px 16px; 
+    border-radius: 20px; 
+    font-family: var(--font-code); 
+    font-size: 0.9rem; 
+    display: inline-block; 
+    margin-bottom: 20px; 
+    border: 1px solid rgba(0, 242, 254, 0.3);
+}
+
+.hero-text h1 { 
+    font-size: 3.2rem; 
+    color: var(--text-white); 
+    margin-bottom: 12px; 
+    line-height: 1.1;
+}
+
+.tagline { 
+    font-size: 1.6rem; 
+    color: var(--accent-cyber); 
+    font-family: var(--font-code); 
+    margin-bottom: 20px; 
+    font-weight: 600;
+}
+
+.description { 
+    font-size: 1.15rem; 
+    margin-bottom: 35px; 
+    color: #b4f8c8; /* Verde pastel suave muy legible */
+}
+
+.btn-primary { 
+    display: inline-block; 
+    background: linear-gradient(45deg, var(--accent-purple), #7b2cbf); 
+    color: var(--text-white); 
+    text-decoration: none; 
+    padding: 14px 32px; 
+    border-radius: 30px; 
+    font-weight: 700; 
+    box-shadow: 0 4px 15px rgba(155, 81, 224, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(155, 81, 224, 0.7);
+}
+
+/* ==========================================
+   3. SOBRE MÍ
+   ========================================== */
+.about-section { padding: 90px 0; }
+
+.about-content { 
+    background-color: var(--bg-card); 
+    border: 1px solid rgba(155, 81, 224, 0.2); 
+    padding: 45px; 
+    border-radius: 12px; 
+    max-width: 850px; 
+    margin: 0 auto; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.about-content p { margin-bottom: 25px; font-size: 1.15rem; }
+
+/* ==========================================
+   4. HABILIDADES (GRID RESPONSIVE)
+   ========================================== */
+.skills-section { padding: 90px 0; }
+
+.skills-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px; 
+}
+
+.skill-card { 
+    background-color: var(--bg-card); 
+    border: 1px solid var(--border-color); 
+    padding: 35px; 
+    border-radius: 12px; 
+    text-align: center; 
+    transition: all 0.3s ease; 
+}
+
+.skill-card:hover { 
+    transform: translateY(-8px); 
+    border-color: var(--accent-neon);
+    box-shadow: 0 10px 25px rgba(0, 242, 254, 0.2);
+}
+
+.skill-icon { font-size: 2.8rem; margin-bottom: 15px; }
+.skill-card h3 { color: var(--text-white); margin-bottom: 12px; font-family: var(--font-code); }
+
+/* ==========================================
+   5. PROYECTOS (GRID + FLEXBOX INTERNO)
+   ========================================== */
+.projects-section { padding: 90px 0; }
+
+.projects-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+    gap: 30px; 
+}
+
+.project-card { 
+    background-color: var(--bg-card); 
+    border: 1px solid var(--border-color); 
+    border-radius: 12px; 
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; 
+    transition: all 0.3s ease;
+}
+
+.project-card:hover { 
+    transform: translateY(-5px); 
+    border-color: var(--accent-purple);
+    box-shadow: 0 10px 25px rgba(155, 81, 224, 0.15);
+}
+
+.project-img-container { height: 190px; overflow: hidden; border-bottom: 2px solid var(--border-color); }
+.project-img-container img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.project-card:hover .project-img-container img { transform: scale(1.05); }
+
+.project-body { padding: 25px; display: flex; flex-direction: column; flex-grow: 1; }
+.project-body h3 { color: var(--text-white); margin-bottom: 12px; font-size: 1.3rem; }
+.project-body p { font-size: 0.98rem; margin-bottom: 20px; flex-grow: 1; }
+
+.project-techs { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
+.project-techs span { 
+    background-color: #1e293b; 
+    color: var(--accent-cyber); 
+    font-family: var(--font-code); 
+    font-size: 0.8rem; 
+    padding: 4px 12px; 
+    border-radius: 6px; 
+    border: 1px solid rgba(57, 255, 20, 0.3); 
+}
+
+.project-link { 
+    color: var(--accent-neon); 
+    text-decoration: none; 
+    font-weight: 700; 
+    font-size: 1rem;
+    align-self: flex-start;
+}
+.project-link:hover { text-decoration: underline; color: var(--accent-cyber); }
+
+/* ==========================================
+   6. CONTACTO (FLEXBOX FLUIDO)
+   ========================================== */
+.contact-section { padding: 90px 0; text-align: center; }
+.contact-text { font-size: 1.3rem; margin-bottom: 40px; }
+
+.contact-container { 
+    display: flex; 
+    justify-content: center; 
+    gap: 25px; 
+    flex-wrap: wrap; 
+}
+
+.contact-item { 
+    background-color: var(--bg-card); 
+    border: 1px solid var(--border-color); 
+    color: var(--text-white); 
+    text-decoration: none; 
+    padding: 18px 35px; 
+    border-radius: 50px; 
+    font-weight: 600; 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    transition: all 0.3s ease; 
+}
+
+.contact-item:hover { 
+    background-color: #1e293b; 
+    border-color: var(--accent-cyber);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+}
+
+/* ==========================================
+   7. PIE DE PÁGINA
+   ========================================== */
+.main-footer { 
+    background-color: #06090f; 
+    border-top: 2px solid var(--border-color); 
+    padding: 45px 20px; 
+    text-align: center; 
+    margin-top: 90px; 
+}
+
+.main-footer p { font-size: 1rem; color: var(--text-white); }
+.footer-subtext { color: #64748b !important; font-size: 0.9rem !important; margin-top: 10px; }
+
+/* ==========================================
+   8. MEDIA QUERIES (RESPONSIVE CELULARES)
+   ========================================== */
+@media (max-width: 768px) {
+    .header-container { 
+        flex-direction: column; 
+        gap: 15px; 
+        text-align: center;
+    }
+    .main-nav ul {
+        gap: 15px;
+    }
+    .hero-container { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 40px;
+    }
+    .hero-text h1 { font-size: 2.4rem; }
+    .hero-image img { width: 230px; height: 230px; }
+    .section-title { font-size: 1.8rem; }
+}
